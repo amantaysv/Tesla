@@ -1,0 +1,112 @@
+.header {
+    padding-top: 24px;
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+
+
+
+    .navbar {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &-brand {
+            img {
+                display: block;
+            }
+        }
+
+        .nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &_active {
+                .nav__link {
+                    display: none;
+                }
+            }
+
+            &__link {
+                margin-right: 15px;
+                @include textStyle(600, 15px, 18px, #000);
+                text-decoration: none;
+                display: flex;
+
+            }
+
+            &__link-1 {
+                color: #E51937;
+                text-decoration: underline;
+            }
+
+            &__1 {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            &__2 {
+                width: 40%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+
+        .burger {
+            display: flex;
+            width: 24px;
+            height: 24px;
+            align-items: center;
+            cursor: pointer;
+
+            &_active {
+                .burger__line {
+                    background: none;
+
+                    &::before {
+                        transform: rotate(135deg);
+                        top: 0;
+                    }
+
+                    &::after {
+                        transform: rotate(45deg);
+                        bottom: 0;
+                    }
+                }
+            }
+
+            &__line {
+                position: relative;
+                width: 24px;
+                height: 2px;
+                background: #E51937;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: #E51937;
+                    top: 6px;
+                    left: 0;
+                    transition: .25s;
+                }
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background: #E51937;
+                    bottom: 6px;
+                    left: 0;
+                    transition: .25s;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@import "../scss/btn";
+@import "../scss/font";
+@import "../scss/header";
+@import "../scss/one";
+@import "../scss/two";
+
+.container {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+}

@@ -1,0 +1,114 @@
+.two {
+    background: url(../images/two/two_bg.png) left 93px no-repeat;
+    max-width: 1440px;
+    width: 100%;
+    position: relative;
+    padding: 103px 0 750px;
+    margin: 0 auto;
+
+    &__title {
+        @include textStyle(600, 70px, 85px, #E51937);
+        margin: 0 0 0 80px;
+    }
+
+    .info {
+        position: absolute;
+        right: 0;
+        top: 37px;
+        padding: 50px;
+        width: 440px;
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+        background: #E51937;
+        color: #FFF;
+
+        .row {
+            flex-direction: column;
+
+            .col {
+                .title {
+                    @include textStyle(600, 30px, 37px, #FFF);
+                    margin-bottom: 11px;
+                }
+
+                .descr {
+                    @include textStyle(500, 15px, 18px, #FFF);
+                    margin-bottom: 54px;
+                }
+
+                .row {
+                    flex-direction: column;
+
+                    .col {
+                        display: flex;
+                        width: 269px;
+                        height: 71px;
+                        align-items: center;
+                        margin: 0 0 35px;
+
+                        .icon-1 {
+                            margin-right: 24px;
+                        }
+
+                        .icon-2 {
+                            margin-right: 16px;
+                        }
+
+                        .icon-3 {
+                            margin-right: 24px;
+                        }
+
+                        .wrapper {
+                            flex-wrap: wrap;
+
+                            .text-1 {
+                                @include textStyle(600, 35px, 43px, #FFF);
+                                margin: 0;
+                            }
+
+                            .text-2 {
+                                @include textStyle(600, 20px, 24px, #FFF);
+                                margin: 0;
+                            }
+
+                            .text-3 {
+                                @include textStyle(normal, 12px, 15px, #FFF);
+                                margin: 0;
+                            }
+
+                            .text-4 {
+                                @include textStyle(600, 20px, 18px, #FFF);
+                                margin: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .col_3 {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 171px;
+
+                .link {
+                    @include textStyle(bold, 13px, 16px, #FFF);
+                    text-align: center;
+                    text-transform: uppercase;
+
+                    img {
+                        margin-right: 5px;
+                    }
+                }
+
+                .btn {
+                    @include btn;
+                    border: 2px solid #FFF;
+                    background: #E51937;
+                    color: #FFF;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+.one {
+    position: relative;
+    background: url(../images/one/tesla-bg.png) center 203px/968px 450px no-repeat;
+    padding-top: 58px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: url(../images/one/Tesla-textbg.png) center top/1440px 467px no-repeat;
+        width: 100%;
+        height: 467px;
+        left: 50%;
+        transform: translate(-50%);
+        z-index: -1;
+    }
+
+    &__title {
+        @include textStyle(600, 90px, 110px, #000);
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    &__subtitle {
+        text-align: center;
+        @include textStyle(500, 15px, 18px, #000);
+        margin: -9px auto 0;
+    }
+
+    .row {
+        margin: 502px auto 37px;
+
+        .col {
+            display: flex;
+            align-items: center;
+            padding: 0;
+
+            .wrapper {
+                width: 150px;
+                margin-left: 14px;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+
+                .text-1 {
+                    @include textStyle(600, 35px, 43px, #000);
+                    margin-right: 6px;
+                }
+
+                .text-2 {
+                    @include textStyle(600, 20px, 24px, #000);
+                }
+
+                .text-3 {
+                    @include textStyle(normal, 12px, 15px, #000);
+                }
+
+                .text-4 {
+                    @include textStyle(bold, 13px, 16px, #000);
+                    margin-left: 7px;
+                    text-align: center;
+                    text-transform: uppercase;
+                }
+
+                &__btn {
+                    @include btn;
+                    border: 2px solid #E51937;
+                    background: #FFF;
+                    color: #E51937;
+                }
+            }
+        }
+
+    }
+
+    .arrow {
+        display: block;
+        margin: 0 auto;
+    }
+}
